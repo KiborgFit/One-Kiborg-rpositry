@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yury Kiborg </title>
+    <style>
+
+.grid { 
+    display: grid;
+    width: 1280px;
+    height: 905px;
+    border-radius: 60px;
+    font-style:inherit;
+    font-size: 30px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    grid-template-columns: 5fr 5fr 3fr;
+    grid-template-rows: 1fr 4fr 1fr 4fr;        
+    grid-template-areas:
+    "header header header"
+    "content content menu"
+    "submenu submenu menu"
+    "footer footer menu" ;
+}
+.menu {    
+    grid-area: menu;
+    color: azure;
+    background: #E5E5E5; 
+    border-bottom-right-radius: 60px;   
+}
+.men {
+    margin-right: 128px;
+}
+.header {
+    background-color:#E5E5E5;    
+    grid-area: header;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;   
+    color: azure;
+    padding: 10px;
+}
+.header {
+    display: flex;
+    display: inline-flex;
+}
+.headpic1 {
+    width: 176px;
+    height: 34px;
+    border-radius: 30px;
+    border: 2px solid #C2C2C2;
+    box-sizing: border-box;
+    margin-top: 42px;
+    margin-left: 776px;
+}
+.headpic2 {
+    width: 31px;
+    height: 31px;
+    background-repeat: no-repeat;
+    background-image: url(pic/536.png); 
+    margin-top: 42px;
+    margin-left: 59px;
+}
+.headpic3 {
+    width: 27px;
+    height: 31px;
+    background-repeat: no-repeat;
+    background-image: url(pic/456.png); 
+    margin-top: 42px;
+    margin-left: 18px;
+}
+.headpic4 {
+    width: 47px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-image: url(pic/7868.png); 
+    margin-top: 36px;
+    margin-left: 18px;
+}
+.headpic5 {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-image: url(pic/qwerty.png); 
+    margin-top: 10px;
+    margin-left: 17px;    
+}
+.submenu {    
+    grid-area: submenu;
+    color: azure;
+    padding: 10px;
+    background: #E5E5E5;
+}
+.devices {
+    width: 104px;
+    height: 29px;
+    margin-left: 128px;
+    margin-top: auto;
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.09em;
+    color: rgba(29, 35, 67, 0.75);
+    background: #E5E5E5;
+}
+.content {
+    background: #E5E5E5;
+    grid-area: content;
+    color: azure;    
+}
+
+.con1, .con2, .con3 {
+    display: flex;
+    display: inline-flex;    
+    height: 204px;
+    border-radius: 20px;
+    margin-top: 90px;
+    background: #FFFFFF;
+}
+.con1 {
+    width: 273px;
+    margin-top: 120px;
+    margin-right: 30px;
+    margin-left: 128px; 
+    border: 1px solid rgb(15, 17, 15); 
+    box-shadow: 0 0 5px 2px rgb(184, 185, 184);  
+}
+.con2 {
+    margin-top: 120px;
+    margin-right: 30px;
+    width: 221px;
+    box-shadow: 0 0 5px 2px rgb(184, 185, 184);
+}
+.con3 {
+    margin-top: 120px;
+    width: 221px;  
+    box-shadow: 0 0 5px 2px rgb(184, 185, 184);    
+}
+
+.men1, .men2, .men3, .men4 {
+    border: 1px solid rgb(249, 250, 250);
+    width: 183px; 
+    height: 153px;
+    margin-left: 5px;
+    border-radius: 30px;
+    background: #FFFFFF;
+    box-shadow: 0 0 5px 2px rgb(184, 185, 184);
+}
+.men1 {
+    margin-top: 40px;
+}
+.men2 {
+    margin-top: 32px;
+}
+.men3 {
+    margin-top: 32px;
+}
+.men4 {
+    margin-top: 32px;
+}
+.menpic1 {
+    width: 48px;
+    height: 34px;
+    margin: auto;
+    margin-top: 46px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    background-repeat: no-repeat;
+    background-image: url(pic/11.png);
+}
+.menpic2 {
+    width: 49px;
+    height: 41px;
+    margin: auto;
+    margin-top: 43px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    background-repeat: no-repeat;
+    background-image: url(pic/12.png);
+}
+.menpic3 {
+    width: 49px;
+    height: 26px;
+    margin: auto;
+    margin-top: 55px;
+    margin-bottom: 18px;
+    border: 1px solid #ffffff;
+    background-repeat: no-repeat;
+    background-image: url(pic/13.png);
+}
+.menpic4 {
+    width: 34px;
+    height: 37px;
+    margin: auto;
+    margin-top: 47px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    background-repeat: no-repeat;
+    background-image: url(pic/14.png);
+}
+.bedroom, .kitchen {
+    width: 155.52px;
+    height: 23px;
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    color: #A3A3A3;
+    margin: auto;
+}
+.kitchen {
+    color: #EE777F;
+    margin: auto;
+
+}
+.uno {
+    width: 365px;
+    height: 290px;   
+    
+}
+.dos {
+    width: 365px;
+    height: 290px;
+}    
+.rooms {
+    width: 157px;
+    height: 36px;
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.09em;
+    color: rgba(29, 35, 67, 0.63);
+    margin-top: 22px;
+    margin-left: 16px;
+}
+.rooms2 {
+    width: 105px;
+    height: 36px;
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.09em;
+    color: rgba(29, 35, 67, 0.63);
+    margin-top: 22px;
+    margin-left: 16px;
+}
+.temperature {
+    width: 130px;
+    height: 43px;
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.03em;
+    color: rgba(29, 35, 67, 0.75);
+    margin-top: 5px;
+    margin-left: 16px;
+}
+.temperature2 {
+    width: 105px;
+    height: 43px;
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.03em;
+    color: rgba(29, 35, 67, 0.75);
+    margin-top: 5px;
+    margin-left: 16px;
+}
+.faren {
+    width: 100px;
+    height: 43px;    
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    letter-spacing: 0.035em;
+    color: rgba(29, 35, 67, 0.75);
+    margin-top: 5px;
+    margin-left: 16px;
+    }
+.grad {
+    width: 77px;
+    height: 176px;
+    border-radius: 25px;
+    margin-top: 13px;    
+}
+.grad1 {
+    width: 77px;
+    height: 90px;
+    background: #FFE6E6;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.grad2 {
+    width: 77px;
+    height: 86px;
+    background: #EE777F;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;       
+}
+.gradpic1 {
+    background-repeat: no-repeat;
+    background-image: url(pic/rrrr.png); 
+    margin:auto;
+}
+.grad3 {
+    width: 77px;
+    height: 104px;
+    background: rgba(202, 238, 239, 0.51);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.grad4 {
+    width: 77px;
+    height: 72px;
+    background: #65BDC0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-repeat: no-repeat;
+    background-image: url(pic/Vector\ \(9\).png);
+}
+.grad5 {
+    width: 77px;
+    height: 41px;
+    background: rgba(197, 202, 227, 0.71);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.grad6 {
+    width: 77px;
+    height: 135px;
+    background: #1D2343;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-repeat: no-repeat;
+    background-image: url(pic/Vector\ \(10\).png);
+}
+.footer {    
+    grid-area: footer;
+    display: flex;
+    flex-wrap: wrap;
+    color: azure;
+    background: #E5E5E5; 
+    border-bottom-left-radius: 60px;
+    
+}
+.foot1, .foot2, .foot3, .foot4, .foot5, .foot6, .foot7, .foot8 {
+    width: 164px;
+    height: 131px;
+    border-radius: 20px;  
+    font-family: Lack;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    color: #FFF5F5;   
+}
+.foot1 {
+    background: #EE777F;
+    margin-left: 128px;   
+}
+.foot2 {
+    background: #65BDC0;
+    margin-left: 37px;
+}
+.foot3 {
+    background: #65BDC0;
+    margin-left: 37px;
+}
+.foot4 {
+    background: #1D2343;    
+    margin-left: 37px;
+}
+.foot5 {
+    background: #1D2343;
+    margin-left: 128px;
+}
+.foot6 {
+    background: #EE777F;
+    margin-left: 37px;
+}
+.foot7 {
+    background: #EE777F;
+    margin-left: 37px;
+}
+.foot8 {
+    background: #65BDC0;
+    margin-left: 37px;
+}
+.footpic1 {
+    background-repeat: no-repeat;
+    background-image: url(pic/464.png);
+    width: 35px;
+    height: 45px;
+    margin-left: 65px;
+    margin-top: 28px;
+    margin-bottom: 14px;   
+}
+.footpic2 {
+    background-repeat: no-repeat;
+    background-image: url(pic/432.png);
+    width: 36px;
+    height: 40px;
+    margin-left: 65px;
+    margin-top: 33px;
+    margin-bottom: 14px;   
+}
+.footpic3 {
+    background-repeat: no-repeat;
+    background-image: url(pic/bgb.png); 
+    width: 35px;
+    height: 33px;
+    margin-left: 65px;
+    margin-top: 40px;
+    margin-bottom: 14px;      
+}
+.footpic4 {
+    background-repeat: no-repeat;
+    background-image: url(pic/gtg.png);
+    width: 33px;
+    height: 40px;
+    margin-left: 65px;
+    margin-top: 33px;
+    margin-bottom: 14px;   
+}
+.footpic5 {
+    background-repeat: no-repeat;
+    background-image: url(pic/nyn.png);
+    width: 46px;
+    height: 46px;
+    margin-left: 65px;
+    margin-top: 28px;
+    margin-bottom: 12px;   
+}
+.footpic6 {
+    background-repeat: no-repeat;
+    background-image: url(pic/frfff.png);
+    width: 44px;
+    height: 39px;
+    margin-left: 65px;
+    margin-top: 33px;
+    margin-bottom: 12px;   
+}
+.footpic7 {
+    background-repeat: no-repeat;
+    background-image: url(pic/ggtg.png);
+    width: 44px;
+    height: 30px;
+    margin-left: 65px;
+    margin-top: 44px;
+    margin-bottom: 12px;   
+}
+.footpic8 {
+    background-repeat: no-repeat;
+    background-image: url(pic/grill.png);
+    width: 37px;
+    height: 48px;
+    margin-left: 65px;
+    margin-top: 26px;
+    margin-bottom: 12px;   
+}
+
+</style>
+    
+</head>
+<body>
+    <div class="grid">
+        <div class="menu">
+            <div class="men1">
+                <div class="menpic1"></div>
+                <div class="bedroom">Bedroom</div>
+            </div>
+            <div class="men2">
+                <div class="menpic2"></div>
+                <div class="kitchen">Kitchen</div>
+            </div>
+            <div class="men3">
+                <div class="menpic3"></div>
+                <div class="bedroom">Living Room</div>
+            </div>
+            <div class="men4">
+                <div class="menpic4"></div>
+                <div class="bedroom">Bathroom</div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="headpic1"></div>
+            <div class="headpic2"></div>
+            <div class="headpic3"></div>
+            <div class="headpic4">
+                <div class="headpic5"></div>
+            </div>            
+        </div>
+        <div class="submenu">
+            <div class="devices">Devices</div>
+        </div>
+        <div class="content">
+            <div class="con1">
+                <div>
+                    <div class="rooms">Room"s </br>Temperature</div>
+                    <div class="temperature">+23.5°C</div>
+                    <div class="faren">74.3°F</div>
+                </div>
+                <div class="grad">
+                    <div class="grad1"></div>
+                    <div class="grad2">
+                        <div class="gradpic1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="con2">
+                <div>
+                    <div class="rooms2">Room"s </br>Humidity</div>
+                    <div class="temperature2">40%</div>
+                </div>
+                <div class="grad">
+                    <div class="grad3"></div>
+                    <div class="grad4">
+                        <div class="gradpic2"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="con3">
+                <div>
+                    <div class="rooms2">Room"s </br>Temperature</div>
+                    <div class="temperature2">86%</div>
+                </div>
+                <div class="grad">
+                    <div class="grad5"></div>
+                    <div class="grad6">
+                        <div class="gradpic3"></div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="footer">            
+                <div class="foot1">
+                    <div class="footpic1"></div>
+                    <div class="footfrid">Fridge</div>
+                </div>
+                <div class="foot2">
+                    <div class="footpic2"></div>
+                    <div class="footfrid">Kettle</div>
+                </div>
+                <div class="foot3">
+                    <div class="footpic3"></div>
+                    <div class="footfrid">Stowe</div>
+                </div>
+                <div class="foot4">
+                    <div class="footpic4"></div>
+                    <div class="footfrid">Dishwasher</div>
+                </div>
+                <div class="foot5">
+                    <div class="footpic5"></div>
+                    <div class="footfrid">Multicooker</div>
+                </div>
+                <div class="foot6">
+                    <div class="footpic6"></div>
+                    <div class="footfrid">TV</div>
+                </div>
+                <div class="foot7">
+                    <div class="footpic7"></div>
+                    <div class="footfrid">Microwave</div>
+                </div>
+                <div class="foot8">
+                    <div class="footpic8"></div>
+                    <div class="footfrid">Indoor Grill</div>
+                </div>            
+        </div>
+    </div>
+</body>
+</html>
